@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "PDF Dark Mode",
+    "name": "Dark-PDFs",
     "version": "1.3",
     "description": "Integrated dark mode for the PDF viewer.",
     "permissions": [
