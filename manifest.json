@@ -2,11 +2,22 @@
     "manifest_version": 3,
     "name": "PDF Dark Mode",
     "version": "1.1",
-    "description": "Modo oscuro ajustable para PDFs con sliders.",
+    "description": "Integrated dark mode for the PDF viewer.",
     "permissions": [
         "activeTab",
-        "scripting"
+        "scripting",
+        "tabs"
     ],
+    "host_permissions": [
+        "<all_urls>",
+        "file:///*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src * blob: data: file:;"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
     "action": {
         "default_popup": "popup.html"
     }
